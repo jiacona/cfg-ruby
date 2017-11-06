@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Star Wars Planets</title>
+    <style>
+body {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Planets of Star Wars</h1>
+    <% @planets.each do |planet| %>
+      <h3><%= planet["name"] %></h3>
+      <ul>
+        <li><strong>Population:</strong> <%= planet['population'] %></li>
+        <li><strong>Diameter:</strong> <%= planet['diameter'] %></li>
+        <li><strong>Gravity:</strong> <%= planet['gravity'] %></li>
+        <li><strong>Terrain:</strong> <%= planet['terrain'] %></li>
+      </ul>
+    <% end %>
+  </body>
+</html>
