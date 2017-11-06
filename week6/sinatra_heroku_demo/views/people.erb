@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Star Wars People</title>
+    <style>
+body {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+    </style>
+  </head>
+  <body>
+    <h1>People of Star Wars</h1>
+    <% @people.each do |person| %>
+      <h3><%= person["name"] %></h3>
+      <ul>
+        <li><strong>Height:</strong> <%= person['height'] %></li>
+        <li><strong>Mass:</strong> <%= person['mass'] %></li>
+        <li><strong>Birth Year:</strong> <%= person['birth_year'] %></li>
+        <li><strong>Eye Color:</strong> <%= person['eye_color'] %></li>
+      </ul>
+    <% end %>
+  </body>
+</html>
